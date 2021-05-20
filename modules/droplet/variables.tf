@@ -12,10 +12,7 @@ variable "image_name" {
     default = "ubuntu.16.04"
 }
 
-variable "name" {
-    type    = string
-    default = "OpenVPN-Master"
-}
+variable "name" {}
 
 variable "droplet_size" {
     type    = string
@@ -44,4 +41,18 @@ variable "filename" {
 variable "master_ip" {
   type      =   string
   default   = "master_ip"
+}
+
+variable "vpc_name" {
+    type      =   string
+    default   = "fra1-vpc-01-swarm"
+}
+variable "ip_range" {
+    type      =   string
+    default   = "10.10.10.0/24"
+}
+
+variable "description" {
+    type      =   string
+    default   = "Subnet for Docker Swarm"
 }

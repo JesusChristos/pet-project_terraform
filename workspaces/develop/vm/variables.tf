@@ -16,3 +16,4 @@ variable "file_permission" {}
 variable "master_ip" {}
 variable "vpc_name" {}
 variable "ip_range" {}
+variable "description" {}

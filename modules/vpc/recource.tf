@@ -11,8 +11,9 @@ provider "digitalocean" {
   token = var.account_token
 }
 
-resource "digitalocean_vpc" "this" {
-  name     = var.vpc_name
-  region   = var.region
-  ip_range = var.ip_range
+resource "digitalocean_vpc" "subnet-swarm" {
+  name        = var.vpc_name
+  region      = var.region
+  ip_range    = var.ip_range
+  description = var.description
 }
