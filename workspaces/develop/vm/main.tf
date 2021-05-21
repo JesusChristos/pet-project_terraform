@@ -1,6 +1,6 @@
 # Provider initialization
 terraform {
-  required_providers {
+  required_providers {                                           #https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs
     digitalocean = {
       source = "digitalocean/digitalocean"
       version = "2.5.0"
@@ -9,23 +9,12 @@ terraform {
 }
 
 # Cloud Provider
-provider "digitalocean" {
+provider "digitalocean" {                                        #https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs
   token = var.account_token
 }
 
-
-#module "vpc" {
-#  source = "../../../modules/vpc"
-#  account_token = var.account_token
-
-#  name        = var.vpc_name
-#  region      = var.region
-#  ip_range    = var.ip_range
-#  description = var.description
-#}
-
-# Create  master server
-module "droplet" {
+# Create nodes 
+module "droplet" {                                               #https://www.terraform.io/docs/language/modules/syntax.html         
   source = "../../../modules/droplet"
   
   account_token = var.account_token

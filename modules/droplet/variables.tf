@@ -53,6 +53,46 @@ variable "ip_range" {
 }
 
 variable "description" {
-    type      =   string
+    type      = string
     default   = "Subnet for Docker Swarm"
+}
+
+variable "lb_name" {
+    type      = string
+    default   = "fra1-load-balancer-01"
+}
+
+variable "lb_region" {
+    type      = string
+    default   = "fra1"
+}
+
+variable "entry_port" {
+    type      = number
+    default   = 80
+}
+
+variable "entry_protocol" {
+    type      = string
+    default   = "http"
+}
+
+variable "target_port" {
+    type      = number
+    default   = 80
+}
+
+variable "target_protocol" {
+    type      = string
+    default   = "http"
+}
+
+variable "port_hck" {
+    type      = number
+    default   = 22
+}
+
+variable "protocol_hck" {
+    type      = string
+    default   = "tcp"
 }

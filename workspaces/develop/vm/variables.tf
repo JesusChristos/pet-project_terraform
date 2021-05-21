@@ -16,4 +16,11 @@ variable "file_permission" {}
 variable "master_ip" {}
 variable "vpc_name" {}
 variable "ip_range" {}
-variable "description" {}
+variable "lb_name" {}
+variable "lb_region" {}
+variable "entry_port" {}
+variable "entry_protocol" {}
+variable "target_port" {}
+variable "target_protocol" {}
+variable "port_hck" {}
+variable "protocol_hck" {}
