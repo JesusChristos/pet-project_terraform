@@ -1,5 +1,6 @@
 *Pidor
 .ssh
+Vagrantfile
 .ssh/*
 dep.yml
 *.log
